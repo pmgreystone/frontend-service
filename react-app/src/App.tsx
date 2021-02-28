@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Route, Link} from "react-router-dom";
 
 const about: React.FC = () => {
     return (
@@ -24,7 +24,8 @@ const App: React.FC = () => {
     return (
         <BrowserRouter>
             <div>
-
+                <Link to="/">Home</Link> <Link to="/about">About</Link> <Link to="/news">News</Link>
+                <br />
                 <Route exact path="/" component={home}/>
                 <Route exact path="/about" component={about}/>
                 <Route exact path="/news" component={news}/>
