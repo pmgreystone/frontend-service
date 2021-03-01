@@ -14,7 +14,7 @@ module.exports = {
     module: {
         rules: [
             // all files with a `.ts` extension will be handled by `ts-loader`
-            { test: /index.ts$/, loader: 'ts-loader', include: [path2.resolve(__dirname, 'index.ts')]}
+            { test: /index.ts$/, loader: 'ts-loader'}
         ]
     },
     plugins: [new webpack.HotModuleReplacementPlugin(), new copyFiles({ patterns: [{ from: 'react-app/build', to: 'dist/build'}]})],
