@@ -17,9 +17,9 @@ module.exports = {
             { test: /index.ts$/, loader: 'ts-loader'}
         ]
     },
-    plugins: [new webpack.HotModuleReplacementPlugin(), new copyFiles({ patterns: [{ from: 'react-app/build', to: 'dist/build'}]})],
+    plugins: [new webpack.HotModuleReplacementPlugin(), new copyFiles({ patterns: [{ from: '../react-app/build', to: 'dist/build'}]})],
     output: {
-        path: path2.resolve(__dirname),
+        path: path2.resolve(__dirname, 'dist'),
         filename: 'index.js'
     },
 };

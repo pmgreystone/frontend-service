@@ -1,5 +1,5 @@
 .idea/
-node_modules/
+node-runtime/node_modules/
+node-runtime/dist/
 react-app/node_modules/
 react-app/build/
-dist/

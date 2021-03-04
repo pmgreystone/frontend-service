@@ -6,7 +6,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'react-app/build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 // This code makes sure that any request that does not matches a static file
 // in the build folder, will just serve index.html. Client side routing is
@@ -18,7 +18,7 @@ app.use((req: Request, res: Response) => {
         res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
         res.header('Expires', '-1');
         res.header('Pragma', 'no-cache');
-        res.sendFile(path.join(__dirname, 'react-app/build', 'index.html'));
+        res.sendFile(path.join(__dirname, 'build', 'index.html'));
     }
 });
 
