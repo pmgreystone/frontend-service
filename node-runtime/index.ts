@@ -29,7 +29,6 @@ const pageTitlesAndDescriptions: routeToPageAndDescriptionMapping = {
 app.use((req: Request, res: Response, next: NextFunction) => {
     if (/(.ico|.js|.css|.jpg|.png|.map)$/i.test(req.path)) {
         next();
-        console.log('Hoi');
     } else {
         const filePath = path.resolve(__dirname, 'build', 'index.html')
         fs.readFile(filePath, 'utf8', (err: ErrnoException | null, data: string) => {
