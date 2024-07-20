@@ -1,6 +1,4 @@
 .idea/
 node-runtime/node_modules/
-node-runtime/dist/
 react-app/node_modules/
-react-app/build/
 node-runtime/package-lock.json
