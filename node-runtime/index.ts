@@ -49,7 +49,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 app.use(express.static(path.join(__dirname, 'build')));
 
 // Start the server
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 6868;
 const server = app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
     console.log('Press Ctrl+C to quit.');
